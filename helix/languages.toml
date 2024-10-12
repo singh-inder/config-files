@@ -1,0 +1,43 @@
+[[language]]
+name = "typescript"
+auto-format = true
+formatter = { command = "prettier", args = ["--parser", "typescript"] }
+
+
+
+#https://github.com/helix-editor/helix/wiki/Language-Server-Configurations#python---pyright--ruff
+
+[[language]]
+name = "python"
+language-servers = [ "pyright", "ruff" ]
+auto-format = true
+
+[language-server.pyright.config.python.analysis]
+typeCheckingMode = "standard"
+
+# if you choose `ruff-lsp`
+[language-server.ruff]
+command = "ruff-lsp"
+[language-server.ruff.config.settings]
+args = ["--ignore", "E501"]
+
+# [[language]]
+# name = "python"
+# language-servers = [ "pyright" ]
+# auto-format = true
+
+
+#https://github.com/helix-editor/helix/wiki/Language-Server-Configurations#python---ruff
+# [language-server.ruff-lsp]
+# command = "ruff-lsp"
+# [[language]]
+# name = "python"
+# language-servers = [ "ruff-lsp" ]
+
+# [[language]]
+# name = "python"
+# language-servers = [ "ruff" ]
+# auto-format = true
+# [language-server.ruff]
+# command = "ruff"
+# args = ["server"]
