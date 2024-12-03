@@ -1,3 +1,5 @@
+#https://github.com/helix-editor/helix/wiki/Language-Server-Configurations
+
 [[language]]
 name = "typescript"
 auto-format = true
@@ -11,8 +13,10 @@ validation = true
 "https://json.schemastore.org/github-workflow.json" = ".github/workflows/*.{yml,yaml}"
 "https://raw.githubusercontent.com/ansible-community/schemas/main/f/ansible-tasks.json" = "roles/{tasks,handlers}/*.{yml,yaml}"
 
-
-#https://github.com/helix-editor/helix/wiki/Language-Server-Configurations
+[[language]]
+name = "go"
+auto-format = true
+formatter = { command = "goimports" }
 
 [[language]]
 name = "python"
