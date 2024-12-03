@@ -3,9 +3,16 @@ name = "typescript"
 auto-format = true
 formatter = { command = "prettier", args = ["--parser", "typescript"] }
 
+[language-server.yaml-language-server.config.yaml]
+format = { enable = true }
+validation = true
+
+[language-server.yaml-language-server.config.yaml.schemas]
+"https://json.schemastore.org/github-workflow.json" = ".github/workflows/*.{yml,yaml}"
+"https://raw.githubusercontent.com/ansible-community/schemas/main/f/ansible-tasks.json" = "roles/{tasks,handlers}/*.{yml,yaml}"
 
 
-#https://github.com/helix-editor/helix/wiki/Language-Server-Configurations#python---pyright--ruff
+#https://github.com/helix-editor/helix/wiki/Language-Server-Configurations
 
 [[language]]
 name = "python"
