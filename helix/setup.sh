@@ -5,9 +5,12 @@ if [ "$EUID" -ne 0 ]; then
   exit
 fi
 
-add-apt-repository ppa:maveonair/helix-editor
-apt update
-apt install helix
+add-apt-repository ppa:maveonair/helix-editor && apt update && apt install helix
+
+if [ $? -ne 0 ]; then
+  echo "Unable to install helix"
+  exit 1
+fi
 
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.1/install.sh | bash
 
