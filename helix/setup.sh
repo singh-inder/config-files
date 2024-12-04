@@ -14,6 +14,9 @@ fi
 
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.1/install.sh | bash
 
+# restart shell nvm may not be found in current shell
+exec $SHELL
+
 if [ -x "$(command -v nvm)" ]; then
   echo "Error installing nvm"
   exit 1
