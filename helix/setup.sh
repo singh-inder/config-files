@@ -19,6 +19,8 @@ if [ -x "$(command -v nvm)" ]; then
   exit 1
 fi
 
+nvm install --lts || exit 1
+
 npm install -g dockerfile-language-server-nodejs @microsoft/compose-language-service yaml-language-server vscode-langservers-extracted typescript typescript-language-server
 
 for file in "languages.toml" "config.toml"; do
