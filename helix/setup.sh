@@ -20,7 +20,7 @@ fi
 
 nvm install --lts || exit 1
 
-npm install -g dockerfile-language-server-nodejs @microsoft/compose-language-service yaml-language-server vscode-langservers-extracted typescript typescript-language-server
+npm install -g dockerfile-language-server-nodejs @microsoft/compose-language-service yaml-language-server vscode-langservers-extracted typescript typescript-language-server bash-language-server
 
 if [ ! -d ~/.config/helix ]; then
     mkdir -p ~/.config/helix
