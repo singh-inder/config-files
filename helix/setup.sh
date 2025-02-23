@@ -1,6 +1,6 @@
 #!/bin/bash
 
-sudo add-apt-repository ppa:maveonair/helix-editor && sudo apt update && sudo apt install helix
+sudo add-apt-repository ppa:maveonair/helix-editor -y && sudo apt update && sudo apt install helix
 
 if [ $? -ne 0 ]; then
     echo "Unable to install helix"
