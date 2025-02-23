@@ -1,4 +1,4 @@
-theme = "dracula"
+theme = "monokai_pro_spectrum"
 
 # https://github.com/helix-editor/helix/issues/1271#issuecomment-1287167230
 #[editor]
