@@ -1,5 +1,8 @@
 theme = "dracula"
 
+# https://github.com/helix-editor/helix/issues/1271#issuecomment-1287167230
+#[editor]
+#true-color = true
 
 [keys.normal]
 # Quick iteration on config changes
