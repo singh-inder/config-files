@@ -22,9 +22,7 @@ nvm install --lts || exit 1
 
 npm install -g dockerfile-language-server-nodejs @microsoft/compose-language-service yaml-language-server vscode-langservers-extracted typescript typescript-language-server bash-language-server
 
-if [ ! -d ~/.config/helix ]; then
-    mkdir -p ~/.config/helix
-fi
+mkdir -p ~/.config/helix
 
 for file in "languages.toml" "config.toml"; do
     curl "https://raw.githubusercontent.com/singh-inder/config-files/refs/heads/main/helix/$file" -o ~/.config/helix/"$file"
